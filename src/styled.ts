@@ -50,7 +50,7 @@ export const Cell = styled.div`
 `
 
 export const GameCell = styled(Cell)<{drop: boolean}>`
-  transition: all 250ms ease-in;
+  transition: background 150ms ease-in, margin-top 150ms ease-in 650ms;
   box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
   margin-top: ${props => props.drop ? "100%" : ""};
   :hover{

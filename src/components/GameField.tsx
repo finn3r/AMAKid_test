@@ -4,6 +4,7 @@ import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {gameSlice} from "../store/reducers/GameSlice";
 import cloud from "../images/cloud.png"
 import start from "../images/start.png"
+import end from "../images/end.png"
 
 const GameField: React.FC = () => {
     const [showError, setShowError] = useState(false);
@@ -32,7 +33,7 @@ const GameField: React.FC = () => {
             {[...Array(countOfGameCells)].map((_, id) =>
                 <ST.GameCell
                     drop={["lose", "win"].includes(status)}
-                    style={{backgroundImage: `url(${id !== cellStart ? cloud : start})`}}
+                    style={{backgroundImage: `url(${id === cellStart ? start : ((status==="lose")&&(id === cellEnd)) ? end :cloud})`}}
                     key={id}
                     onClick={() => {
                         if(ready){
