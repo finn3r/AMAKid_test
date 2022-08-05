@@ -33,7 +33,7 @@ const GameField: React.FC = () => {
             {[...Array(countOfGameCells)].map((_, id) =>
                 <ST.GameCell
                     drop={["lose", "win"].includes(status)}
-                    style={{backgroundImage: `url(${id === cellStart ? start : ((status==="lose")&&(id === cellEnd)) ? end :cloud})`}}
+                    style={{backgroundImage: `url(${((status==="lose")&&(id === cellEnd)) ? end : (id === cellStart) ? start : cloud})`}}
                     key={id}
                     onClick={() => {
                         if(ready){
