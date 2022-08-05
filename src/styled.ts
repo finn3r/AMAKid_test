@@ -84,12 +84,14 @@ export const PopUpMenuContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 200ms ease-in;
 `;
 
 export const PopUpMenuContent = styled.div`
   background: white;
   border: 1px solid black;
   border-radius: 10px;
+  padding: 10px;
 `;
 
 export const SettingButtonContainer = styled.div`
@@ -123,7 +125,7 @@ export const SettingInputText = styled.p`
 export const GameStatusText = styled.p`
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-content: center;
   text-align: center;
   flex-direction: column;
@@ -135,7 +137,7 @@ export const GameStatusImage = styled.img`
 `;
 
 export const ScoreContainer = styled.div`
-  background: #bde0e8;
+  background: #ffffff;
   position: absolute;
   border-radius: 10px;
   top: 0;
